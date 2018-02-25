@@ -6,12 +6,12 @@
 __하지만 포기하지 않고 꾸준히 노력하겠습니다!!__
 ## Support
 * [GitHub](https://github.com/)
- * [TIL GitHub](https://github.com/ykyahwa/TIL)
+  * [TIL GitHub](https://github.com/ykyahwa/TIL)
 * [Atom](https://atom.io/)
 * [SourceTree](https://www.sourcetreeapp.com/)
 * Markdown
- * [GitHub Markdown](https://help.github.com/categories/writing-on-github/)
- * [Markdown 참조](https://mdp.tylingsoft.com/)
+  * [GitHub Markdown](https://help.github.com/categories/writing-on-github/)
+  * [Markdown 참조](https://mdp.tylingsoft.com/)
 * [작심삼일 앱](https://play.google.com/store/apps/details?id=com.ykyahwa.the3daysplan)
 * [하루 15분 전공 공부팀](http://javaexpert.tistory.com/909?category=0)
 
