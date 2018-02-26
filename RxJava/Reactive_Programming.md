@@ -1,7 +1,7 @@
 #Reactive Programming
 * 1990년대에 제시된 데이터 흐름과 전달에 관한 프로그래밍 패러다임
 * [ReactiveX](http://reactivex.io/)
-  * Document 주요 클래스에 대해서는 한글설명을 제공하고있다.
+  * Dosc 주요 클래스에 대해서는 한글설명을 제공하고있다.
   * 마블다이어그램의 이해가 필요하다.
 * [Reactive programming Wiki](https://en.wikipedia.org/wiki/Reactive_programming)
 
