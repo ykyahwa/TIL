@@ -13,9 +13,10 @@
  * 인자로 넣은 데이터 차례로 발행하는 Observable 생성
  * 최대 10개
  <img src="http://reactivex.io/documentation/operators/images/just.c.png"/>
+
 ```Java
-public static <T> Observable<T> just(T item)
-public static <T> Observable<T> just(T item1, T item2)
+public static <T> Observable<T> just(T item);
+public static <T> Observable<T> just(T item1, T item2);
 ```
 
 ```Java
@@ -36,9 +37,11 @@ public static <T> Observable<T> just(T item1, T item2)
 ## create()
   * onNext(), onComplete(), onError() 직접 호출해 줘야함
 <img src="http://reactivex.io/documentation/operators/images/create.c.png"/>
+
 ```Java
 Observable<T> create(ObservableOnSubscribe<T> source)
 ```
+
 ```Java
 Observable<String> observable = Observable.create(
   (ObservableEmitter<String> emitter) -> {
