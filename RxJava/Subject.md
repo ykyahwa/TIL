@@ -1,4 +1,4 @@
-#Subject
+# Subject
  * cold Observable - > hot Observable로 바꿔줌
  * Observable 속성과 구독자 속성이 모두 있음
 
