@@ -118,8 +118,7 @@ Hello
 
  실행결과
  Hello
-<<<<<<< HEAD
- '''
+```
 
  ## Hot Observable, Cold Observable
   * Cold Observable
@@ -159,6 +158,4 @@ Utils.sleep(100);
 #1 = 다
 #2 = 다
 #3 = 다
-=======
->>>>>>> 5d95091505d35aaa19761d225cd106f11bab70f4
 ```
