@@ -113,3 +113,43 @@ Hello
  실행결과
  Hello
  '''
+
+ ## Hot Observable, Cold Observable
+  * Cold Observable
+    * subscribe()가 호출하여 구독하지 않으면 데이터 발행하지 않음
+    * 게으른 접근법
+    * 서버 API 요청, 파일 읽기 등
+  * Hot Observable
+    * 구독자 조재여부와 관계없이 데이터 발행
+    * 여러 구독자 가능
+    * 클릭 이벤트, 시스템 이벤트, 센서 데이터
+
+## ConnectableObservable
+ * Cold Observable -> Hot Observable 로 변환
+ * connect() 호출 한 이후 subscribe() 호출 한 구독자에게 발행
+
+```Java
+String[] hanguls = {"가","나","다"};
+Observable<String> balls = Observable.interval(100L, TimeUnit.MILLISECONDS)
+  .map(Long::intValue)
+  .map(i -> hanguls[i])
+  .take(hanguls.length);
+
+ConnectableObservable<String> observable = balls.publish();
+observable.subscribe(data -> System.out.println("#1 = " + data));
+observable.subscribe(data -> System.out.println("#2 = " + data));
+observable.connect();
+
+Utils.sleep(250);
+observable.subscribe(data -> System.out.println("#3 = " + data));
+Utils.sleep(100);
+
+실행결과
+#1 = 가
+#2 = 가
+#1 = 나
+#2 = 나
+#1 = 다
+#2 = 다
+#3 = 다
+```
