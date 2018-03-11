@@ -1,8 +1,8 @@
-#Single
+# Single
  * 오직 1개의 데이터만 발행
  * onSuccess(T value), onError() 로 구성
 
-#just()
+# just()
 ```java
 Single<String> single = Single.just("Hello");
 single.subscribe(System.out::println);
@@ -11,7 +11,7 @@ single.subscribe(System.out::println);
 Hello
 ```
 
-##Single 사용
+## Single 사용
 
 ```java
 //Observable -> Single
