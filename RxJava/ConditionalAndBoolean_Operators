@@ -1,0 +1,36 @@
+# 조건 연산자
+  * Observable의 흐름 제어
+  > amb(), takeUntil(other), sipUntil(other), all()
+
+## amb()
+  * ambiguous - 모호한
+  * 여러 Observable 중 가장 먼저 데이터 발행한 Observable 1개 선택, 다른 Observable 에서 발행하는 데이터 무시
+
+```java
+@SchedulerSupport(SchedulerSupport.NONE)
+public static <T> Observable<T> amb(Iterable<? extends ObservableSource<? extneds T>> sources)
+```
+
+```java
+String[] data1 = {"가","나","다"};
+String[] data2 = {"A","B","C"};
+
+List<Observable<String>> observables = Arrays.asList(
+  Observable.fromArray(data1)
+    .doOnComplete(() -> Log.d("Observable #1 : onComplete()")),
+    Observable.fromArray(data2)
+      .delay(100L, TimeUnit.MILLISECONDS)
+      .doOnComplete(() -> Log.d("Observable #2 : onComplete()"))
+);
+
+Observable.amb(observables)
+  .doOnComplete(() -> Log.d("Result : onComplete()"))
+  .subscribe(Log::i);
+
+실행결과
+가
+나
+다
+Observable #1 : onComplete()
+Result : onComplete()
+```
