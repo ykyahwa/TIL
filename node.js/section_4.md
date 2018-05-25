@@ -17,7 +17,7 @@ Finishing up
 Inside of callback
 ```
 
-##npm request
+## npm request
 
 <https://www.npmjs.com/package/request>
 

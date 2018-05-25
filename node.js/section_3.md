@@ -18,6 +18,7 @@
 <https://nodejs.org/api>
 
 require - 모듈 로드
+
 ￼<img src="./image/code_01.png"/>
 
 ## lodash
@@ -34,6 +35,7 @@ require - 모듈 로드
 	sudo 어드민권한으로 실행
 	nodemon app.js
 -
+
 	node app.js list -> app.js 실행하고 list 실행
 	console.log(process.argv); 프로세스 확인
 
@@ -56,7 +58,7 @@ console.log(stringObj);
 ```
 
 
-##디버그
+## 디버그
 
 	node inspect debugging.js
 	debug> list(10) ->10줄 디버그
@@ -66,14 +68,16 @@ console.log(stringObj);
 	debug> repl
 
 -
+
 	nodemon으로 실행 코드 변경시 디버깅이 재시작 된다
 	nodemon inspect app.js read --title="hello"
 -
+
 크롬으로 디버그
 	
 	node --inspect-brk playground/debugging.js
 <chrome://inspect> 에서 확인
 
-##yargs 옵션
+## yargs 옵션
 
 <img src="./image/code_03.png"/>
