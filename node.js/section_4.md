@@ -33,3 +33,13 @@ request({
     console.log(JSON.stringify(body, undefined, 2));
 })
 ```
+
+## Encode, Decode
+
+```
+node 터미널
+> encodeURIComponent('도산대로 139')
+'%EB%8F%84%EC%82%B0%EB%8C%80%EB%A1%9C%20139'
+> decodeURIComponent('%EB%8F%84%EC%82%B0%EB%8C%80%EB%A1%9C%20139')
+'도산대로 139'
+```
