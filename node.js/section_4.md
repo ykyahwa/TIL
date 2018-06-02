@@ -43,3 +43,31 @@ node 터미널
 > decodeURIComponent('%EB%8F%84%EC%82%B0%EB%8C%80%EB%A1%9C%20139')
 '도산대로 139'
 ```
+
+## ES6 Promise
+
+```
+var asyncAdd = (a, b) => {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            if (typeof a === 'number' && typeof b === 'number') {
+                resolve(a + b);
+            } else {
+                reject('Arguments must be numbers' );
+            }
+        }, 1500);
+    });
+};
+
+asyncAdd(5, 7).then((res) => {
+    console.log('Result: ', res);
+    return asyncAdd(res, 33);
+}).then((res) => {
+    console.log('Should be 45', res)
+}).catch((errorMessage) => {
+    console.log(errorMessage);
+});
+```
+## NPM axios
+
+<https://www.npmjs.com/package/axios>
