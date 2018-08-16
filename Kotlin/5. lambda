@@ -1,0 +1,23 @@
+# Lambda
+
+## lazy 컬랙션
+ 
+ * filter. map 은 매번 컬랙션을 생성 반환 한다. - 아이템이 많으면 성능에 문제가 된다.
+ * 시퀀스(Sequence)를 사용
+
+```kotlin
+poeple.asSequence() //시퀀스로 변경
+    .map(Person::name)
+    .filter{ it.startWith("A") }
+    .toList() //시퀀스를 다시 컬랙션으로 변경
+```
+
+ * map(), filter() 중간 연산은 지연된다. 
+ * toList() 최종연산이 호출 될 때 적용된다.
+
+ > generateSequence 로 시퀀스 만들기
+ ```kotlin
+ val naturalNumbers = generateSequence(0) { it + 1} // 중간연산 - 지연
+ val numbersTo100 = naturalNumbers.takeWhile {it <= 100} // 중간연산 - 지연
+ println(numbersTo100.sum()) // 최종연산
+ ```
